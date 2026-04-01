@@ -11,7 +11,7 @@ https://ssd-disclosure.com/ssd-advisory-overlayfs-pe/ - This is where we got the
 
 ---
 
-## Moniker Link (CVE-2024-21413)
+## Moniker Link ([CVE-2024-21413](https://github.com/advisories/GHSA-9mp4-h7q5-2rgq))
 #### Microsoft Outlook Remote Code Execution Vulnerability
 
 https://www.cve.org/CVERecord?id=CVE-2024-21413
