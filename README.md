@@ -1,5 +1,11 @@
 # cybersec-writeups
 ---
+
+⚠️ Disclaimer
+This content is for educational and authorized security testing purposes only. Do NOT run this on systems without explicit permission.
+
+---
+
 ## OverlayFS
 https://ssd-disclosure.com/ssd-advisory-overlayfs-pe/
 #### Want to know more about OverlayFS?
