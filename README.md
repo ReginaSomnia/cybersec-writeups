@@ -65,3 +65,32 @@ Yes, the Preview Pane is an attack vector.
 An attacker could craft a malicious link that bypasses the Protected View Protocol, which leads to the leaking of local NTLM credential information and remote code execution (RCE).
 
 ---
+
+## CVE-2026-31431 Copy Fail
+
+Added to the repo while learning the explotation and mitigation. Exploit is not mine, it's from the [PoC Exploit Repo](https://github.com/painoob/Copy-Fail-Exploit-CVE-2026-31431/tree/main)
+
+Mitigation:
+**Disable vulnerable module:**
+```shell
+echo "install algif_aead /bin/false" > /etc/modprobe.d/disable-algif.conf
+rmmod algif_aead
+```
+
+**Apply kernel patch:**
+```shell
+apt update && apt upgrade
+```
+
+---
+
+## Dirty Frag
+
+This combines CVE-2026-43284 and CVE-2026-43500
+
+Added to the repo while learning the explotation and mitigation. Exploit is not mine, it's from the [PoC Exploit Repo](https://github.com/V4bel/dirtyfrag)
+
+Mitigation:
+```shell
+sh -c "printf 'install esp4 /bin/false\ninstall esp6 /bin/false\ninstall rxrpc /bin/false\n' > /etc/modprobe.d/dirtyfrag.conf; rmmod esp4 esp6 rxrpc 2>/dev/null; echo 3 > /proc/sys/vm/drop_caches; true"
+```
